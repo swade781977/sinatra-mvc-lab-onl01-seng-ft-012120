@@ -24,21 +24,15 @@ class PigLatinizer
       if consonant > -1
         cons = word[0..consonant]
         start = consonant + 1
-        alt_word = word[..-1]
+        alt_word = word[start..-1]
+        new_word = alt_word + cons + "ay"
+        result << new_word
+      end
       
-       word_v = word[0].include?(/[aeouiAIEOU]/)
-       #word_v = word[0].scan(/[aeouiAIEOU]/).count
-      if word_v 
+      if consonant == -1
         new_word = word + "way"
         result << new_word
       end
-      if word_v == 0
-        first_letter = word[0]
-        alt_word = word[1..-1]
-        new_word = alt_word + first_letter + "ay"
-        result << new_word
-      end
-      word = new_word
     end
     result.join(' ')
   end
