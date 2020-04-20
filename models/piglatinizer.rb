@@ -16,7 +16,7 @@ class PigLatinizer
     words.each do |word|
       n = 0
       consonant = -1
-      while word[n].match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ])
+      while word[n].match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/)
         consonant = n 
         n += 1 
       end
