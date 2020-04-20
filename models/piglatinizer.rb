@@ -14,6 +14,7 @@ class PigLatinizer
     words = text.split(" ")
     result = []
     words.each do |word|
+      binding.pry
        word_v = word[0].include?(/[aeouiAIEOU]/)
        #word_v = word[0].scan(/[aeouiAIEOU]/).count
       if word_v 
