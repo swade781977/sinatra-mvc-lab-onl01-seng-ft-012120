@@ -22,7 +22,8 @@ class PigLatinizer
       end
       
       if consonant > -1
-        
+        cons = word[0..consonant]
+        alt_word = word[(consonant + 1)..-1]
       
        word_v = word[0].include?(/[aeouiAIEOU]/)
        #word_v = word[0].scan(/[aeouiAIEOU]/).count
