@@ -10,6 +10,7 @@ class App < Sinatra::Base
   
    post '/piglatinize' do
     temp_pig = PigLatinizer.new
+    @latinized = PigLatinizer.new(@text)
     @text = params[:user_phrase]
     @latinized = PigLatinizer.new(@text)
     
