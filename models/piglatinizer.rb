@@ -14,7 +14,7 @@ class PigLatinizer
     words = text.split(" ")
     result = []
     words.each do |word|
-       word_v = word[0].scan(/[aeoui]/).count
+       word_v = word[0].scan(/[aeouiAIEOU]/).count
       if word_v > 0
         new_word = word + "way"
         result << new_word
