@@ -34,6 +34,7 @@ class PigLatinizer
         result << new_word
       end
     end
+    binding.pry
     result.join(' ')
   end
 end
