@@ -10,7 +10,7 @@ class PigLatinizer
     words = @text.split(" ")
   end
   
-  def piglatinize(text)
+  def piglatinize
     words = text.split(" ")
     result = []
     words.each do |word|
